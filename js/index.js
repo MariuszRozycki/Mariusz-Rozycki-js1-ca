@@ -8,7 +8,7 @@ const id = params.get("id");
 
 const url = 'https://api.openbrewerydb.org/breweries';
 console.log(url);
-const breweriesContainer = document.querySelector(".container-breweries");
+const container = document.querySelector(".container");
 
 async function getData() {
 
@@ -17,6 +17,8 @@ async function getData() {
     const results = await response.json();
     console.log(results);
 
+    container.innerHTML = `<h1>List of breweries:</h1>`;
+
     for (let i = 0; i < results.length; i++) {
       let data = results[i];
 
@@ -24,13 +26,13 @@ async function getData() {
     }
   }
   catch (error) {
-    console.log(error);
+    container.innerHTML = displayError() + `<div class="error">${error}</div>`;
   }
 }
 getData();
 
 function createHtml(data) {
-  breweriesContainer.innerHTML += `<a class="card" href="details.html?id=${data.id}">
+  container.innerHTML += `<a class="card" href="details.html?id=${data.id}">
                                     <h2>Company: <span>${data.name}</span></h2>
                                    </a>`
 }
