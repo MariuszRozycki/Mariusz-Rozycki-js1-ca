@@ -1,0 +1,54 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 span {
+  display: block;
+}
+
+.card {
+  display: block;
+  border: 2px solid red;
+  margin: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  margin: 30px auto;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+  transform: rotate(360deg);
+  animation: rotate 1s linear infinite;
+  border-radius: 50%;
+}
+
+.loader::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
