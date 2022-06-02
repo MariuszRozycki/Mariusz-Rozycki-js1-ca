@@ -26,13 +26,13 @@ async function getData() {
     }
   }
   catch (error) {
-    container.innerHTML = displayError() + `<div class="error">${error}</div>`;
+    container.innerHTML = displayError() + `<p class="error">${error}</p>`;
   }
 }
 getData();
 
 function createHtml(data) {
   container.innerHTML += `<a class="card" href="details.html?id=${data.id}">
-                                    <h2>Company: <span>${data.name}</span></h2>
-                                   </a>`
+                            <h2>Company: <span>${data.name}</span></h2>
+                          </a>`
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <p id="form-message"></p>
+    <form id="form">
+
+      <label for="name">Name (required):
+        <input id="name" name="name">
+        <p class="form-error" id="name-error">Name is required!</p>
+      </label>
+
+      <label for="subject">Subject (minimum 10 characters):
+        <input id="subject" name="Subject">
+        <p class="form-error" id="subject-error">Field must have minimum 10 characters!</p>
+      </label>
+
+      <label for="email">Email:
+        <input id="email" name="email">
+        <p class="form-error" id="email-error">Write correct e-mail address</p>
+      </label>
+
+      <label for="user-address">Address (minimum 25 characters):
+        <input id="user-address" name="user-address">
+        <p class="form-error" id="user-address--error">Field must have minimum 25 characters!</p>
+      </label>
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <script src="js/contact.js"></script>
+</body>
+
+</html>
