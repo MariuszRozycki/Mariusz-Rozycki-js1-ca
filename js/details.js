@@ -23,28 +23,28 @@ async function fetchBrewery() {
 fetchBrewery();
 
 function createHtml(details) {
-  contactLink.innerHTML += `<a href="./contact.html?id=${details.id}">Contact: ${details.name}</a>`
+  contactLink.innerHTML += `<a href="./contact.html?id=${details.id}">Contact: ${details.name}</a>`;
 
   if (details.website_url) {
     detailContainer.innerHTML += `<div class="details-item">
-                                  <h2>${details.name}</h2>
-                                  <p>Brewery type: ${details.brewery_type}</p>
-                                  <p>City: ${details.city}</p>
-                                  <p>Country: ${details.country}</p>
-                                  <p>State: ${details.state}</p>
-                                  <p>Postal code: ${details.postal_code}</p>
-                                  <a href="${details.website_url}">Website: ${details.website_url}</a>
+                                    <h2>${details.name}</h2>
+                                    <p>Brewery type: ${details.brewery_type}</p>
+                                    <p>City: ${details.city}</p>
+                                    <p>Country: ${details.country}</p>
+                                    <p>State: ${details.state}</p>
+                                    <p>Postal code: ${details.postal_code}</p>
+                                    <a href="${details.website_url}">Website: ${details.website_url}</a>
                                   </div>`;
   }
 
   if (details.website_url === null) {
     detailContainer.innerHTML += `<div class="details-item">
-                                 <h2>${details.name}</h2>
-                                 <p>Brewery type: ${details.brewery_type}</p>
-                                 <p>City: ${details.city}</p>
-                                 <p>Country: ${details.country}</p>
-                                 <p>State: ${details.state}</p>
-                                 <p>Postal code: ${details.postal_code}</p>
-                                 </div>`
+                                    <h2>${details.name}</h2>
+                                    <p>Brewery type: ${details.brewery_type}</p>
+                                    <p>City: ${details.city}</p>
+                                    <p>Country: ${details.country}</p>
+                                    <p>State: ${details.state}</p>
+                                    <p>Postal code: ${details.postal_code}</p>
+                                  </div>`;
   }
 }

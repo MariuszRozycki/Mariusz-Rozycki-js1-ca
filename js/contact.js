@@ -55,8 +55,8 @@ function validateForm(event) {
   } else {
     userAddressError.style.display = "block";
   }
-
   fetchBrewery();
+
 };
 
 function checkLength(value, len) {
@@ -82,14 +82,3 @@ function formCorrectlyValidated(details) {
     form.reset();
   }
 }
-
-
-
-
-
-
-
-
-
-
-
