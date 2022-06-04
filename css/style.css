@@ -25,7 +25,7 @@ ul li {
 
 .container {
   padding: 0;
-  width: 500px;
+  min-width: 500px;
 }
 
 h2 span {
@@ -140,41 +140,45 @@ form {
   font-size: 16px;
   border: 2px solid blue;
   border-radius: 5px;
-  padding: 20px 15px;
+  /* padding: 20px 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 label,
 input {
-  display: block;
-  margin: 2px 0 20px;
+  padding: 10px;
 }
 
 input {
-  padding: 5px;
+  margin: 2px 0;
   border: 1px solid blue;
   border-radius: 5px;
   font-size: 18px;
 }
 
-label,
-input {
-  width: 90%;
-}
-
 .form-error {
   display: none;
-  margin: 2px 0;
+  margin: 2px 0 20px;
   color: red;
   font-weight: 600;
 }
 
-#form-message {
+.success {
   border: 2px solid green;
   border-radius: 5px;
   background-color: rgb(173, 255, 47);
   color: black;
   font-weight: 600;
-  padding: 10px 15px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
 }
 
 button {
