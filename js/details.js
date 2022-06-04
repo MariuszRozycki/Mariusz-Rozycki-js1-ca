@@ -12,7 +12,7 @@ async function fetchBrewery() {
   try {
     const response = await fetch(url);
     const details = await response.json();
-    document.title = details.name;
+    document.title = `Details of: ${details.name}`;
     detailContainer.innerHTML = `<h1>Brewery details: </h1>`;
     createHtml(details);
   }

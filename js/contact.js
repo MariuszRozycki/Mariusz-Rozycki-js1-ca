@@ -19,7 +19,7 @@ async function fetchBrewery() {
   try {
     const response = await fetch(url);
     const details = await response.json();
-    document.title = `Contact ${details.name}`;
+    document.title = `Contact: ${details.name}`;
     itemDetails.innerHTML = `<a href="./details.html?id=${details.id}">Back to: ${details.name} details</a>`;
     formCorrectlyValidated(details);
   }
