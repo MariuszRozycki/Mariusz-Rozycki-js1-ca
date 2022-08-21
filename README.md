@@ -8,6 +8,8 @@ I displayedmore then 3 different properties from recived JSON on this page.
 I had to set title of the HTML page to be one of the property value.
 As in index.html I had to catch any errors and display a message on the page if an error occured.
 
+During loading of API results displays loading indicator.
+
 I created form in contact.html with following inputs and validation rules:
 - name - required
 - subject - must have a value with a minimum length of 10
@@ -15,3 +17,4 @@ I created form in contact.html with following inputs and validation rules:
 - address - must have a value with a minimum length of 25
 
 I wrote code to validate the input. If any of the inputs fail validation display an error message for the relevant input.
+After validation passes, it is add a message above the form indicating the form passed validation.
