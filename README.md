@@ -1,3 +1,5 @@
+App address: https://fluffy-crumble-9f9fd9.netlify.app/
+
 One among many study assignments. I had to find some public, free to use API (I worked with American brewery API).
 I had to fetch an array of results and fetch a single result using an ID, name or other property.
 The App consists of index.html, details.html and contact.html. 
