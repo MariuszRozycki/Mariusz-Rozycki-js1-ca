@@ -12,6 +12,7 @@ async function getData() {
 
     for (let i = 0; i < results.length; i++) {
       let data = results[i];
+      console.log(results);
       createHtml(data);
     }
   }
@@ -22,7 +23,12 @@ async function getData() {
 getData();
 
 function createHtml(data) {
-  container.innerHTML += `<a class="card" href="details.html?id=${data.id}">
-                            <h2>Company: <span>${data.name}</span></h2>
-                          </a>`
+  container.innerHTML += `
+                          <div onclick="location.href='details.html?id=${data.id}'" class="card">
+                            <a>
+                              <h2>Company: <span>${data.name}</span></h2>
+                              <p>Street: ${data.street}</p>
+                              <a class="phone" href="tel:${data.phone}">Phone: ${data.phone} call us!</a>
+                            </a>
+                          </div>`;
 }
